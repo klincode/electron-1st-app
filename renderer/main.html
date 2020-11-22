@@ -7,12 +7,29 @@
   <link rel="stylesheet" href="main.css">
   </head>
   <body>
+<header>
+  <button id="show-modal">+</button>
+  <input id="search" type="text" placeholder="Search">
+</header>
 
-    <h1>Hello Electron!</h1>
-    <p>Build cross-platform desktop apps with JavaScript, HTML, and CSS</p>
+<main>
+  <div id="items"> 
+    <p id="no-items">No items</p>
+    <!-- <div class="read-item">
+      <img src="https://placehold.it/500/500" alt="">
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div> -->
+  </div>
+</main>
+
+<div id="modal">
+<input type="text" id="url" placeholder="Enter URL">
+<button id="add-item">Add Item</button>
+<button id="close-modal">Cancel</button>
+</div>
+
 
     <script>
-      // You can also require other files to run in this process
       require('./app.js')
     </script>
   </body>

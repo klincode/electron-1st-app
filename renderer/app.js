@@ -47,8 +47,8 @@ addItem.addEventListener('click',e=>{
 
 //listen for new item form main process
 ipcRenderer.on('new-item-success',(e,newItem)=>{
-  console.log('dupa'+newItem);
-
+  console.log(newItem);
+  // document.getElementById('test').src=newItem.screenshot;
      //enable buttons
      toggleModalButtons()
 

@@ -50,11 +50,22 @@ font-size: 30px;
 }
 
 main {
-
+    
   flex-grow: 1;
   overflow-y: scroll;
+  /* animation: test 3s infinite ; */
 }
-
+/* @keyframes test{
+  0% {
+    clip-path: polygon(0 0,100% 0,100% 50%,0 50%);
+  }
+  50% {
+    clip-path: polygon(0 0,100% 0,100% 60%,0 40%);
+  }
+  100% {
+    clip-path: polygon(0 0,100% 0,100% 50%,0 50%);
+  }
+} */
 #no-items{
   font-weight: bold;
   color:silver;

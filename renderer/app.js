@@ -1,11 +1,13 @@
 const { ipcRenderer } = require("electron");
-
+const items = require('./items')
 //dom nodes
+
 let showModal = document.getElementById('show-modal'),
  closeModal = document.getElementById('close-modal'),
  modal = document.getElementById('modal'),
  addItem= document.getElementById('add-item'),
- itemUrl= document.getElementById('url')
+ itemUrl= document.getElementById('url');
+
 
 //disable & enable modal buttons
 const toggleModalButtons =()=>{
@@ -48,7 +50,11 @@ addItem.addEventListener('click',e=>{
 //listen for new item form main process
 ipcRenderer.on('new-item-success',(e,newItem)=>{
   console.log(newItem);
-  // document.getElementById('test').src=newItem.screenshot;
+  // add new iteim to interface w zewnętrznym module uruchom funkcję additem
+  items.addItem(newItem,true);
+
+
+
      //enable buttons
      toggleModalButtons()
 

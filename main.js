@@ -24,7 +24,7 @@ console.log(state.x)
   mainWindow = new BrowserWindow({
     x:state.x,y:state.y,
     width: state.width, height:state.height,
-    minWidth:350,maxWidth:650,minHeight:300,
+    minWidth:350,maxWidth:1050,minHeight:300,
     webPreferences: { nodeIntegration: true }
   })
 

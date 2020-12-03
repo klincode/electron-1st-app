@@ -7,6 +7,24 @@ let showModal = document.getElementById('show-modal'),
  modal = document.getElementById('modal'),
  addItem= document.getElementById('add-item'),
  itemUrl= document.getElementById('url');
+search = document.getElementById('search');
+
+//filter itesm
+search.addEventListener('keyup',e=>{
+  //loop items
+  //weż wszystkie leemeny z tą klasą i zamień je na tablicę
+  Array.from(document.getElementsByClassName('read-item')).forEach(item=> {
+    let hasMatch = item.innerText.toLowerCase().includes(search.value)
+    item.style.display = hasMatch ?'flex':'none';
+  })
+})
+
+//navigate item selection with up/down key
+document.addEventListener('keydown',e=>{
+  if (e.key==='ArrowUp' || e.key==='ArrowDown') {
+    items.changeSelection(e.key)
+  }
+})
 
 
 //disable & enable modal buttons
